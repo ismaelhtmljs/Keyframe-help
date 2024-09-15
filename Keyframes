@@ -1,0 +1,55 @@
+.NombraDeTuClase{
+    animation: [NombreDeLaAnimacion] [DuracionDeLaAnimacion] [TipoDeAceleracion] [RepeticionDeLaAnimacion];
+}
+@keyframes [NombreDeLaAnimacion]{
+    0%{
+    }
+    [Tiempo]%{
+    }
+    [Tiempo]%{
+    }
+    100%{
+    }
+}
+
+Explicacion : 
+[NombreDeLaAnimacion]: El nombre de la animación que has definido usando @keyframes. Esto le dice al navegador qué animación aplicar.
+
+[DuracionDeLaAnimacion]: La duración de un ciclo completo de la animación. Por ejemplo, 2s para 2 segundos.
+
+[TipoDeAceleracion]: El tipo de aceleración que controla la velocidad de la animación. Puede ser linear, ease, ease-in, ease-out, etc.
+
+[RepeticionDeLaAnimacion]: Cuántas veces se repite la animación. Puede ser un número específico (por ejemplo, 3) o infinite para repetir indefinidamente.
+
+0%: Define los estilos al inicio de la animación.
+
+[Tiempo]%: Define los estilos en puntos intermedios de la animación. Puedes tener varios puntos intermedios, como 50%, para definir cómo cambian los estilos durante la animación.
+
+100%: Define los estilos al final de la animación.
+
+EJEMPLO : 
+.NombraDeTuClase {
+    animation: mover 2s ease-in-out infinite;
+}
+
+@keyframes mover {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(100px);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+EXPLICACION DEL EJEMPLO :
+La animación se llama mover.
+Dura 2 segundos (2s).
+Usa ease-in-out para un efecto de aceleración suave.
+Se repite infinitamente (infinite).
+La animación mueve un elemento de su posición original a 100px a la derecha y luego regresa a su posición original mientras cambia su opacidad.
